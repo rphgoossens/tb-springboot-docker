@@ -6,6 +6,6 @@ spring:
     hibernate:
       ddl-auto: update
   datasource:
-    url: jdbc:mysql://localhost:3306/db_terrax
+    url: jdbc:mysql://172.17.0.1:3306/db_terrax
     username: tb_admin
     password: tb_admin
