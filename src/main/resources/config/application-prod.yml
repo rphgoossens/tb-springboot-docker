@@ -1,0 +1,20 @@
+server:
+  port: 8090
+
+spring:
+  jpa:
+    properties:
+      javax:
+        persistence:
+          schema-generation:
+            create-source: metadata
+            database:
+              action: update
+            scripts:
+              action: drop-and-create
+              create-target: ./create.sql
+              drop-target: ./drop.sql
+  datasource:
+    url: jdbc:mysql://localhost:3306/db_terrax
+    username: tb_admin
+    password: tb_admin
