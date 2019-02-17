@@ -1,0 +1,15 @@
+server:
+  port: ${SERVER_PORT}
+
+spring:
+  jpa:
+    properties:
+      javax:
+        persistence:
+          schema-generation:
+            database:
+              action: none
+  datasource:
+    url: jdbc:${DB_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
