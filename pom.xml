@@ -17,6 +17,7 @@
     <properties>
         <java.version>1.8</java.version>
         <docker.image.prefix>rphgoossens</docker.image.prefix>
+        <docker.image.tag>tb-docker-2.0</docker.image.tag>
     </properties>
 
     <dependencies>
@@ -82,7 +83,7 @@
                 <version>1.4.9</version>
                 <configuration>
                     <repository>${docker.image.prefix}/${project.artifactId}</repository>
-                    <tag>tb-docker-2.0</tag>
+                    <tag>${docker.image.tag}</tag>
                 </configuration>
             </plugin>
 
