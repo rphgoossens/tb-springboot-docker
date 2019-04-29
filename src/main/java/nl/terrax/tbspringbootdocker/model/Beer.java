@@ -1,5 +1,7 @@
 package nl.terrax.tbspringbootdocker.model;
 
+import org.hibernate.annotations.GenericGenerator;
+
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.util.Objects;
@@ -9,7 +11,14 @@ import java.util.Objects;
 public class Beer {
 
     @Id
-    @GeneratedValue(strategy=GenerationType.AUTO)
+    @GeneratedValue(
+            strategy = GenerationType.AUTO,
+            generator = "native"
+    )
+    @GenericGenerator(
+            name = "native",
+            strategy = "native"
+    )
     private Long id;
 
     @NotNull
